@@ -3,8 +3,8 @@ package org.jboss.seam.jclouds.blobstore;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 
-import org.jboss.weld.extensions.bean.generic.Generic;
-import org.jboss.weld.extensions.bean.generic.GenericConfiguration;
+import org.jboss.seam.solder.bean.generic.Generic;
+import org.jboss.seam.solder.bean.generic.GenericConfiguration;
 import org.jclouds.blobstore.AsyncBlobStore;
 import org.jclouds.blobstore.BlobMap;
 import org.jclouds.blobstore.BlobStore;

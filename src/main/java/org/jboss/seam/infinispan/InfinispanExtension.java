@@ -16,9 +16,9 @@ import javax.enterprise.inject.spi.Producer;
 
 import org.infinispan.config.Configuration;
 import org.infinispan.manager.CacheContainer;
-import org.jboss.weld.extensions.bean.Beans;
-import org.jboss.weld.extensions.literal.GenericTypeLiteral;
-import org.jboss.weld.extensions.reflection.annotated.AnnotatedTypeBuilder;
+import org.jboss.seam.solder.bean.Beans;
+import org.jboss.seam.solder.literal.GenericTypeLiteral;
+import org.jboss.seam.solder.reflection.annotated.AnnotatedTypeBuilder;
 
 public class InfinispanExtension implements Extension {
 

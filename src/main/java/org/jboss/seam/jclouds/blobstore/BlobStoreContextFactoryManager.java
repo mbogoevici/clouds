@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 
-import org.jboss.weld.extensions.bean.defaultbean.DefaultBean;
+import org.jboss.seam.solder.bean.defaultbean.DefaultBean;
 import org.jclouds.blobstore.BlobStoreContextFactory;
 
 @ApplicationScoped

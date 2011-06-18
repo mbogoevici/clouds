@@ -5,8 +5,8 @@ import java.util.Set;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 
-import org.jboss.weld.extensions.bean.generic.Generic;
-import org.jboss.weld.extensions.bean.generic.GenericConfiguration;
+import org.jboss.seam.solder.bean.generic.Generic;
+import org.jboss.seam.solder.bean.generic.GenericConfiguration;
 import org.jclouds.compute.ComputeService;
 import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.LoadBalancerService;
@@ -19,7 +19,7 @@ import org.jclouds.compute.options.TemplateOptions;
 import org.jclouds.domain.Location;
 import org.jclouds.rest.RestContext;
 
-import static org.jboss.weld.extensions.reflection.Reflections.cast;
+import static org.jboss.seam.solder.reflection.Reflections.cast;
 
 @GenericConfiguration(JCloudsComputeService.class)
 public class ComputeServiceManager {

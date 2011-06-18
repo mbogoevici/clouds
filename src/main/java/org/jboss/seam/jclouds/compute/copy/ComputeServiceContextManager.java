@@ -7,8 +7,8 @@ import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 
-import org.jboss.weld.extensions.bean.generic.Generic;
-import org.jboss.weld.extensions.bean.generic.GenericConfiguration;
+import org.jboss.seam.solder.bean.generic.Generic;
+import org.jboss.seam.solder.bean.generic.GenericConfiguration;
 import org.jclouds.compute.ComputeServiceContext;
 import org.jclouds.compute.ComputeServiceContextFactory;
 

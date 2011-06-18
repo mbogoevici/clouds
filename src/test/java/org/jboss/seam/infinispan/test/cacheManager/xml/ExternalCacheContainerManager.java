@@ -11,7 +11,7 @@ import org.infinispan.manager.CacheContainer;
 import org.infinispan.manager.DefaultCacheManager;
 import org.infinispan.manager.EmbeddedCacheManager;
 import org.jboss.seam.infinispan.CacheContainerManager;
-import org.jboss.weld.extensions.resourceLoader.Resource;
+import org.jboss.seam.solder.resourceLoader.Resource;
 
 @Specializes
 public class ExternalCacheContainerManager extends CacheContainerManager {

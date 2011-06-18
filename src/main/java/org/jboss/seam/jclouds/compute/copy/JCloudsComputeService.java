@@ -20,7 +20,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.util.Properties;
 
-import org.jboss.weld.extensions.bean.generic.GenericType;
+import org.jboss.seam.solder.bean.generic.GenericType;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;

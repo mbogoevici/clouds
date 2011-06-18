@@ -9,11 +9,11 @@ import javax.inject.Inject;
 import org.infinispan.AdvancedCache;
 import org.infinispan.manager.CacheContainer;
 import org.jboss.seam.infinispan.event.cache.CacheEventBridge;
-import org.jboss.weld.extensions.bean.generic.ApplyScope;
-import org.jboss.weld.extensions.bean.generic.Generic;
-import org.jboss.weld.extensions.bean.generic.GenericConfiguration;
+import org.jboss.seam.solder.bean.generic.ApplyScope;
+import org.jboss.seam.solder.bean.generic.Generic;
+import org.jboss.seam.solder.bean.generic.GenericConfiguration;
 
-import static org.jboss.weld.extensions.bean.Beans.getQualifiers;
+import static org.jboss.seam.solder.bean.Beans.getQualifiers;
 
 @GenericConfiguration(Infinispan.class)
 public class GenericCacheManager<K, V> {

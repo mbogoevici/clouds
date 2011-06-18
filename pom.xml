@@ -17,14 +17,14 @@
    <name>Seam Clouds</name>
 
    <properties>
-      <seam.version>3.0.0.b01</seam.version>
+      <seam.version>3.0.0.Final</seam.version>
       <jclouds.version>1.0-beta-7</jclouds.version>
       <infinispan.version>4.1.0.FINAL</infinispan.version>
-      <arquillian.version>1.0.0.Alpha4</arquillian.version>
-      <weld.version>1.1.0-SNAPSHOT</weld.version>
-      <weld.extensions.version>1.0.0-SNAPSHOT</weld.extensions.version>
-      <cdi.api.version>1.0-SP2</cdi.api.version>
+      <arquillian.version>1.0.0.Alpha5</arquillian.version>
+      <weld.version>1.1.1.Final</weld.version>
+      <cdi.api.version>1.0-SP4</cdi.api.version>
       <jboss.logging.version>3.0.0.Beta4</jboss.logging.version>
+      <seam-solder.version>3.0.0.Final</seam-solder.version>
    </properties>
 
    <dependencyManagement>
@@ -49,9 +49,15 @@
          
          <!-- Weld Extensions -->
          <dependency>
-            <groupId>org.jboss.weld</groupId>
-            <artifactId>weld-extensions</artifactId>
-            <version>${weld.extensions.version}</version>
+            <groupId>org.jboss.seam.solder</groupId>
+            <artifactId>seam-solder-api</artifactId>
+            <version>${seam-solder.version}</version>
+         </dependency>
+
+          <dependency>
+            <groupId>org.jboss.seam.solder</groupId>
+            <artifactId>seam-solder-impl</artifactId>
+            <version>${seam-solder.version}</version>
          </dependency>
 
       </dependencies>
@@ -73,10 +79,15 @@
       </dependency>
       
       <dependency>
-         <groupId>org.jboss.weld</groupId>
-         <artifactId>weld-extensions</artifactId>
+         <groupId>org.jboss.seam.solder</groupId>
+         <artifactId>seam-solder-api</artifactId>
       </dependency>
-      
+
+      <dependency>
+         <groupId>org.jboss.seam.solder</groupId>
+         <artifactId>seam-solder-impl</artifactId>
+      </dependency>
+
       <dependency>
          <groupId>org.jclouds</groupId>
          <artifactId>jclouds-blobstore</artifactId>
@@ -161,11 +172,11 @@
    <profiles>
       <profile>
          <id>default</id>
-         <activation>
-            <property>
-               <name>!incontainer</name>
-            </property>
-         </activation>
+         <!--<activation>-->
+            <!--<property>-->
+               <!--<name>!incontainer</name>-->
+            <!--</property>-->
+         <!--</activation>-->
          <dependencies>
             <dependency>
                <groupId>org.jboss.weld.arquillian.container</groupId>
@@ -216,16 +227,23 @@
             </property>
          </activation>
          <dependencies>
+             <dependency>
+               <groupId>org.jboss.arquillian</groupId>
+               <artifactId>arquillian-spi</artifactId>
+               <version>${arquillian.version}</version>
+               <scope>test</scope>
+            </dependency>
+
             <dependency>
                <groupId>org.jboss.arquillian.container</groupId>
-               <artifactId>arquillian-jbossas-remote-60</artifactId>
+               <artifactId>arquillian-jbossas-remote-6</artifactId>
                <version>${arquillian.version}</version>
                <scope>test</scope>
             </dependency>
             <dependency>
                <groupId>org.jboss.jbossas</groupId>
                <artifactId>jboss-as-client</artifactId>
-               <version>6.0.0.20100429-M3</version>
+               <version>6.0.0.Final</version>
                <type>pom</type>
                <scope>test</scope>
             </dependency>

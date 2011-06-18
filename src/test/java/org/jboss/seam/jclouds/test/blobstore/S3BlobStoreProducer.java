@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;
 
 import org.jboss.seam.jclouds.blobstore.JCloudsBlobStore;
-import org.jboss.weld.extensions.resourceLoader.Resource;
+import org.jboss.seam.solder.resourceLoader.Resource;
 import org.jclouds.blobstore.AsyncBlobStore;
 import org.jclouds.blobstore.BlobMap;
 import org.jclouds.blobstore.BlobStore;

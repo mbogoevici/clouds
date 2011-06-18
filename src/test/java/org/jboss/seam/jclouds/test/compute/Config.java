@@ -7,7 +7,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;
 
 import org.jboss.seam.jclouds.compute.copy.JCloudsComputeService;
-import org.jboss.weld.extensions.resourceLoader.Resource;
+import org.jboss.seam.solder.resourceLoader.Resource;
 
 @ApplicationScoped
 public class Config {

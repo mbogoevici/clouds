@@ -21,7 +21,7 @@ import java.lang.annotation.Target;
 
 import org.infinispan.config.Configuration;
 import org.infinispan.manager.CacheContainer;
-import org.jboss.weld.extensions.bean.generic.GenericType;
+import org.jboss.seam.solder.bean.generic.GenericType;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;

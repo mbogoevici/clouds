@@ -53,7 +53,7 @@ public class TransientTest {
         return ShrinkWrap.create(JavaArchive.class, "test.jar")
                 .addPackage(TransientTest.class.getPackage())
                 .addPackage(JCloudsBlobStore.class.getPackage())
-                .addManifestResource(BEANS_XML, "beans.xml");
+                .addAsManifestResource(BEANS_XML, "beans.xml");
     }
 
     @Inject
